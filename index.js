@@ -1,0 +1,32 @@
+map={
+  "i":"R",
+  "k":"r",
+  "j":"U",
+  "f":"u",
+  "d":"L",
+  "e":"l",
+  "h":"F",
+  "g":"f",
+  "s":"D",
+  "l":"d",
+  ";":"Y",
+  "a":"y",
+  "w":"B",
+  "o":"b",
+  "y":"X",
+  "t":"x",
+  "b":"X",
+  "n":"x",
+  "p":"Z",
+  "q":"z",
+  "u":"Rm",
+  "m":"rM",
+  "v":"lm",
+  "r":"LM",
+  "z":"UE",
+  "x":"ue"
+}
+cube.rotation.y=0
+onkeydown=e=>{
+  (x=map[e.key])&&cube.twist(x)
+}
