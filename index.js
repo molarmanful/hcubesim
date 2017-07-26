@@ -21,12 +21,14 @@ map={
   "q":"z",
   "u":"Rm",
   "m":"rM",
-  "v":"lm",
-  "r":"LM",
+  "v":"LM",
+  "r":"lm",
   "z":"UE",
   "x":"ue"
 }
+
 cube.rotation.y=0
+cube.rotation.x=.6
 onkeydown=e=>{
-  (x=map[e.key])&&cube.twist(x)
+  e.ctrlKey||e.altKey||e.metaKey||((x=map[e.key])&&cube.twist(x))
 }
