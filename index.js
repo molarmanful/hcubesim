@@ -1,4 +1,5 @@
-map={
+map={}
+map.heise={
   "i":"R",
   "k":"r",
   "j":"U",
@@ -27,8 +28,30 @@ map={
   "x":"ue"
 }
 
+map.pang={
+  "f":"R",
+  "v":"r",
+  "w":"U",
+  "r":"u",
+  "z":"L",
+  "a":"l",
+  "t":"F",
+  "q":"f",
+  "c":"D",
+  "x":"d",
+  "d":"M",
+  "e":"m",
+  "i":"X",
+  "k":"x",
+  "j":"Y",
+  "l":"y",
+  "o":"Z",
+  "u":"z",
+}
+
 cube.rotation.y=0
 cube.rotation.x=.6
+lo='pang'
 onkeydown=e=>{
-  e.ctrlKey||e.altKey||e.metaKey||((x=map[e.key])&&cube.twist(x))
+  e.ctrlKey||e.altKey||e.metaKey||((x=map[lo||'pang'][e.key])&&cube.twist(x))
 }
