@@ -47,11 +47,13 @@ map.pang={
   "l":"y",
   "o":"Z",
   "u":"z",
+  ";":"."
 }
 
 cube.rotation.y=0
 cube.rotation.x=.6
 lo='pang'
+lm='xX'
 onkeydown=e=>{
-  e.ctrlKey||e.altKey||e.metaKey||((x=map[lo||'pang'][e.key])&&cube.twist(x))
+  e.ctrlKey||e.altKey||e.metaKey||((x=map[lo||'pang'][e.key])&&cube.twist(lm=x=='.'?lm:x))
 }
